@@ -61,7 +61,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public User signIn(String login, String password) throws UserServiceExeption {
-        System.out.println("login " + login + " " + "pass " + password);
         if (login == null || login.isEmpty()) {
             throw new UserServiceExeption("Login is empty");
         }
@@ -71,11 +70,14 @@ public class UserServiceImpl implements UserService {
         }
         try {
             if (userDao.isUser(login)) {
+
                 return userDao.getUser(login);
+
             } else {
                 throw new UserServiceExeption("User or password incorrect");
             }
         } catch (DAOException e) {
+
             throw new UserServiceExeption("Failed user data ");
         }
 
