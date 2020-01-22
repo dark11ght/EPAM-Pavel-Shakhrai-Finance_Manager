@@ -5,9 +5,9 @@ import by.shakhrai.service.exeptoin.UserServiceExeption;
 
 public interface UserService {
 
-    User signUp(String login, char[] password) throws UserServiceExeption;
+    User signUp(String login, String password) throws UserServiceExeption;
 
-    User signIn(String login, char[] password) throws UserServiceExeption;
+    User signIn(String login, String password) throws UserServiceExeption;
 
     void deactivateAccount(User user, char[] password) throws UserServiceExeption;
 

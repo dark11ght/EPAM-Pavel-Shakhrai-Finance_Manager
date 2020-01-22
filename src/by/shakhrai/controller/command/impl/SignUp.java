@@ -14,7 +14,7 @@ public class SignUp implements Command {
 
         String[] requestData = request.split(delimiter);
         String logIn = requestData[0];
-        char[] password = requestData[1].toCharArray();
+        String password = requestData[1];
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         UserService userService = serviceFactory.getUserService();

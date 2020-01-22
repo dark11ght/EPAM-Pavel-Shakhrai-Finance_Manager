@@ -56,14 +56,13 @@ public class FileUserDaoImpl implements UserDao {
     }
 
     @Override
-    public boolean isUser(String login, char[] password) throws DAOException {
+    public boolean isUser(String login, String password) throws DAOException {
         try {
             Scanner scanner = new Scanner(userFile);
-            String pass = String.valueOf(password);
-            String[] user;
+                        String[] user;
             while (scanner.hasNextLine()) {
                 user = scanner.nextLine().split(daoSeparator);
-                if (login.equals(user[1]) && pass.equals(user[2])) {
+                if (login.equals(user[1]) && password.equals(user[2])) {
                     return true;
                 }
             }

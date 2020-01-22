@@ -12,8 +12,7 @@ public class Validator {
         return false;
     }
 
-    public static boolean passValid(char[] pass) {
-        String password = String.valueOf(pass);
+    public static boolean passValid(String password) {
 
         if (!password.matches(LOGIN_PASS_PATTERN)) {
             return true;

@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     private AccountDao accountDao = daoFactory.getAccountDao();
 
     @Override
-    public User signUp(String login, char[] password) throws UserServiceExeption {
+    public User signUp(String login, String password) throws UserServiceExeption {
         if (login == null || login.isEmpty()) {
             throw new UserServiceExeption("Null logIn.");
         }
@@ -42,7 +42,7 @@ public class UserServiceImpl implements UserService {
         } catch (DAOException e) {
             throw new UserServiceExeption(e);
         }
-        String pass = String.valueOf(password);
+        String pass = password;
         User user = new User(login, pass);
         try {
             userDao.addUser(user);
@@ -60,7 +60,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User signIn(String login, char[] password) throws UserServiceExeption {
+    public User signIn(String login, String password) throws UserServiceExeption {
         System.out.println("login " + login + " " + "pass " + password);
         if (login == null || login.isEmpty()) {
             throw new UserServiceExeption("Login is empty");

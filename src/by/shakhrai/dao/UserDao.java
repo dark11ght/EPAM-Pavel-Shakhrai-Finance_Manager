@@ -8,7 +8,7 @@ public interface UserDao {
 
     User getUser(String login) throws DAOException;
 
-    boolean isUser(String login, char[] password) throws DAOException;
+    boolean isUser(String login, String password) throws DAOException;
 
     boolean isUser(String login) throws DAOException;
 

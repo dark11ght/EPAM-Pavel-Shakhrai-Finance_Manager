@@ -16,7 +16,7 @@ public class SignIn implements Command {
 
         String[] requestData = request.split(delimiter);
         String login = requestData[1];
-        char[] password = requestData[2].toCharArray();
+        String password = requestData[2];
 
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         UserService userService = serviceFactory.getUserService();
