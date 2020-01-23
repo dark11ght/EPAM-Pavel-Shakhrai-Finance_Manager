@@ -2,7 +2,9 @@ package by.shakhrai.controller;
 
 import by.shakhrai.controller.command.Command;
 import by.shakhrai.controller.command.CommandName;
+import by.shakhrai.controller.command.impl.GetAccounts;
 import by.shakhrai.controller.command.impl.SignIn;
+import by.shakhrai.controller.command.impl.SignUp;
 import by.shakhrai.controller.command.impl.WrongRequest;
 
 import java.util.HashMap;
@@ -13,6 +15,8 @@ public final class CommandProvider {
 
     CommandProvider() {
         repository.put(CommandName.SIGN_IN, new SignIn());
+        repository.put(CommandName.SIGN_UP, new SignUp());
+        repository.put(CommandName.ADD_ACCOUNT, new GetAccounts());
         repository.put(CommandName.WRONG_REQUEST, new WrongRequest());
     }
 
