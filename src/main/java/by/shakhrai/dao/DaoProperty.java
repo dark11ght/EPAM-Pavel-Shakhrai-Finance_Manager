@@ -9,7 +9,7 @@ public class DaoProperty {
     static {
         properties = new Properties();
         try {
-            properties.load(new FileReader("src/by/shakhrai/properties/DAOProperties.properties"));
+            properties.load(new FileReader("src/main/java/by/shakhrai/properties/DAOProperties.properties"));
         } catch (IOException ignored) {
         }
     }
