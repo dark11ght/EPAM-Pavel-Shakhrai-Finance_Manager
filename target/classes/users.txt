@@ -1,2 +1,0 @@
-1, pavel, password
-2, vasya, password2
