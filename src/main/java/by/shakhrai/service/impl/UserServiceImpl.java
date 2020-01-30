@@ -84,7 +84,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public void deactivateAccount(User user, char[] password) throws UserServiceException {
+    public void deactivateAccount(User user, String password) throws UserServiceException {
         //TODO write method
 
     }

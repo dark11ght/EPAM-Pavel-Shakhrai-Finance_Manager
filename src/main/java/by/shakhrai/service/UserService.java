@@ -9,7 +9,7 @@ public interface UserService {
 
     User signIn(String login, String password) throws UserServiceException;
 
-    void deactivateAccount(User user, char[] password) throws UserServiceException;
+    void deactivateAccount(User user, String password) throws UserServiceException;
 
 
 }
