@@ -4,8 +4,8 @@ import by.shakhrai.controller.ControllerProperty;
 import by.shakhrai.controller.command.Command;
 import by.shakhrai.entity.Account;
 import by.shakhrai.service.AccountService;
-import by.shakhrai.service.exeptoin.AccountServiceExeption;
-import by.shakhrai.service.factory.ServiceFactory;
+import by.shakhrai.exceptions.AccountServiceException;
+import by.shakhrai.factory.ServiceFactory;
 
 public class GetAccounts implements Command {
     @Override
@@ -26,7 +26,7 @@ public class GetAccounts implements Command {
                         append(account.getBalance()).append("\n");
             }
             response = stringBuilder.toString();
-        } catch (AccountServiceExeption e) {
+        } catch (AccountServiceException e) {
             response = ControllerProperty.getStringValue("failedToGetAccounts") + e.getMessage();
         }
         return response;

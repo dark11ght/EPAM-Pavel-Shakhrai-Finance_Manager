@@ -4,8 +4,8 @@ import by.shakhrai.controller.ControllerProperty;
 import by.shakhrai.controller.command.Command;
 import by.shakhrai.entity.User;
 import by.shakhrai.service.UserService;
-import by.shakhrai.service.exeptoin.UserServiceExeption;
-import by.shakhrai.service.factory.ServiceFactory;
+import by.shakhrai.exceptions.UserServiceException;
+import by.shakhrai.factory.ServiceFactory;
 
 public class SignUp implements Command {
     @Override
@@ -22,7 +22,7 @@ public class SignUp implements Command {
         try {
             User user = userService.signUp(logIn, password);
             response = user.getId() + delimiter + user.getLogin();
-        } catch (UserServiceExeption e) {
+        } catch (UserServiceException e) {
             response = ControllerProperty.getStringValue("signUpFailed") + e.getMessage();
         }
         return response;

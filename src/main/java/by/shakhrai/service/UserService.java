@@ -1,15 +1,15 @@
 package by.shakhrai.service;
 
 import by.shakhrai.entity.User;
-import by.shakhrai.service.exeptoin.UserServiceExeption;
+import by.shakhrai.exceptions.UserServiceException;
 
 public interface UserService {
 
-    User signUp(String login, String password) throws UserServiceExeption;
+    User signUp(String login, String password) throws UserServiceException;
 
-    User signIn(String login, String password) throws UserServiceExeption;
+    User signIn(String login, String password) throws UserServiceException;
 
-    void deactivateAccount(User user, char[] password) throws UserServiceExeption;
+    void deactivateAccount(User user, char[] password) throws UserServiceException;
 
 
 }

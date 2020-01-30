@@ -4,8 +4,8 @@ import by.shakhrai.controller.ControllerProperty;
 import by.shakhrai.controller.command.Command;
 import by.shakhrai.entity.Account;
 import by.shakhrai.service.AccountService;
-import by.shakhrai.service.exeptoin.AccountServiceExeption;
-import by.shakhrai.service.factory.ServiceFactory;
+import by.shakhrai.exceptions.AccountServiceException;
+import by.shakhrai.factory.ServiceFactory;
 
 
 public class AddAccount implements Command {
@@ -26,7 +26,7 @@ public class AddAccount implements Command {
         try {
             financeTracker.addAccount(userId, account);
             response = ControllerProperty.getStringValue("accountAdd");
-        } catch (AccountServiceExeption e) {
+        } catch (AccountServiceException e) {
             response = ControllerProperty.getStringValue("failedToAddAccount") + e.getMessage();
         }
         return response;

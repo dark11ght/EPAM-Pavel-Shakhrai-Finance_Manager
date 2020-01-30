@@ -1,6 +1,6 @@
 package by.shakhrai.dao;
 
-import by.shakhrai.dao.exception.DAOException;
+import by.shakhrai.exceptions.DAOException;
 import by.shakhrai.entity.User;
 
 public interface UserDao {

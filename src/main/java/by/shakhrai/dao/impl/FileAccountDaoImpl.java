@@ -1,7 +1,7 @@
 package by.shakhrai.dao.impl;
 
 import by.shakhrai.dao.AccountDao;
-import by.shakhrai.dao.exception.DAOException;
+import by.shakhrai.exceptions.DAOException;
 import by.shakhrai.entity.Account;
 
 import java.io.*;

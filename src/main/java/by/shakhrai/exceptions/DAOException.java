@@ -1,4 +1,4 @@
-package by.shakhrai.dao.exception;
+package by.shakhrai.exceptions;
 
 public class DAOException extends Exception{
     public DAOException() {

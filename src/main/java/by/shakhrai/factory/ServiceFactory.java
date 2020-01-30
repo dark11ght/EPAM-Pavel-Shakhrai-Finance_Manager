@@ -1,4 +1,4 @@
-package by.shakhrai.service.factory;
+package by.shakhrai.factory;
 
 import by.shakhrai.service.AccountService;
 import by.shakhrai.service.UserService;

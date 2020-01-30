@@ -1,4 +1,4 @@
-package by.shakhrai.dao.factory;
+package by.shakhrai.factory;
 
 import by.shakhrai.dao.AccountDao;
 import by.shakhrai.dao.DaoProperty;
